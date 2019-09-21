@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../assets/fonts/Inter-Bold.otf');
+}
+@font-face {
+    font-family: 'Akzidenz Grotesk Bold';
+    src: url('../assets/fonts/AGNextBold.otf');
+}
+@font-face {
+    font-family: 'Akzidenz Grotesk Light';
+    src: url('../assets/fonts/AGNextLight.otf');
+}
+@font-face {
+    font-family: 'Sharp Sans Semi';
+    src: url('../assets/fonts/SharpSansSemi.otf');
+}
+@font-face {
+    font-family: 'National Med';
+    src: url('../assets/fonts/NationalMed.otf');
+}
+@font-face {
+    font-family: 'Founder Med';
+    src: url('../assets/fonts/FounderMed.otf');
+}
+@font-face {
+    font-family: 'Founder Reg';
+    src: url('../assets/fonts/FounderReg.otf');
+}
+
+body {
+    font-family: 'Akzidenz Grotesk Bold';
+    margin: 0;
+    background-color: rgb(255, 244, 234);
+}
+
+.header {
+    margin: 10vw;
+}
+
+.header-title {
+    font-size: 6rem;
+    grid-area: main;
+    color: rgb(255, 189, 34);
+}
+
+.header-subtitle {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(253, 95, 98);
+    flex-direction: column;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.main-content {
+    font-family: 'Akzidenz Grotesk Light';
+    margin-left: 10vw;
+    max-width: 80ch;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+}
+
+/* Test Styles */
+
+.description-text {
+    font-family: 'Founder Reg';
+    font-size: 4rem;
+    line-height: 60px;
+    text-align: left;
+    margin-top: 10vh;
+    width: calc(2 / 3 * 100%);
+    line-height: 70px;
+    min-width: 21ch;
+    position: relative;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.unfade {
+    animation-name: unfade;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.web-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#description-container {
+    position: relative;
+    margin-right: 4rem;
+}
+
+.description-image {
+    position: absolute;
+    top: 0;
+    // left: calc(3 / 4 * 100%);
+    left: 120%;
+}
+
+.hidden {
+    animation-name: hidden;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.shown {
+    animation-name: shown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.focus {
+    // color:rgb(253, 95, 98);
+    animation-name: focus;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.unfocus {
+    animation-name: unfocus;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hidden {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes shown {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade {
+    from { color: #000000; }
+    // to { color: rgba(0, 0, 0, 0.15); }
+    to { color: rgba(247, 230, 182, 0.85)}
+}
+
+@keyframes unfade {
+    from { color: rgba(247, 230, 182, 0.85)}
+    // from { color: rgba(0, 0, 0, 0.15); }
+    to { color: #000000; }
+}
+
+@keyframes focus {
+    from { color: #000000; }
+    to { color: rgb(253, 95, 98); }
+}
+
+@keyframes unfocus {
+    from { color: rgb(253, 95, 98);  }
+    to { color: #000000; } 
+}

@@ -54,7 +54,7 @@ scroller
 
         container.querySelector(`#${element.id}-image`).classList.remove('shown');
 
-        if (element.id === 'hci' && direction === 'up') {
+        if (element.id === 'ict' && direction === 'up') {
             container.querySelector('#main-image').classList.add('shown');
         }
     })

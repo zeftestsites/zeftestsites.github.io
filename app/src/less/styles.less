@@ -27,6 +27,7 @@
     src: url('../assets/fonts/FounderReg.otf');
 }
 
+
 body {
     font-family: 'Akzidenz Grotesk Bold';
     margin: 0;
@@ -68,6 +69,8 @@ body {
 
 /* Test Styles */
 
+/*
+
 .description-text {
     font-family: 'Founder Reg';
     font-size: 4rem;
@@ -80,11 +83,7 @@ body {
     position: relative;
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
+
 
 .unfade {
     animation-name: unfade;
@@ -105,7 +104,23 @@ body {
 #description-container {
     position: relative;
     margin-right: 4rem;
+    color: black;
+    transition: color 0.5s ease-in;
 }
+
+#description-container.fade {
+    transition: color 0.5s ease-in;
+    color: grey;
+    // animation-name: fade;
+    // animation-duration: 0.5s;
+    // animation-fill-mode: forwards;
+}
+
+// #description-container.fade .step {
+// transition: color 0.5s ease-in;
+//     color: grey;
+// }
+
 
 .description-image {
     position: absolute;
@@ -126,11 +141,18 @@ body {
     animation-fill-mode: forwards;
 }
 
+.step {
+    color: inherit;
+    transition: color 0.5s ease-in;
+}
+
 .focus {
     // color:rgb(253, 95, 98);
-    animation-name: focus;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    // animation-name: focus;
+    // animation-duration: 0.5s;
+    // animation-fill-mode: forwards;
+    transition: color 0.5s ease-in;
+    color: red;
 }
 
 .unfocus {
@@ -169,4 +191,66 @@ body {
 @keyframes unfocus {
     from { color: rgb(253, 95, 98);  }
     to { color: #000000; } 
+}
+
+*/
+
+.description-text {
+    font-family: 'Founder Reg';
+    font-size: 4rem;
+    line-height: 60px;
+    text-align: left;
+    margin-top: 4rem;
+    width: calc(2 / 3 * 100%);
+    line-height: 70px;
+    min-width: 21ch;
+    position: relative;
+}
+
+#description-container {
+    position: relative;
+    margin-right: 4rem;
+    color: black;
+    transition: color 0.5s ease-in;
+}
+
+.description-image {
+    position: absolute;
+    top: -5rem;
+    // left: calc(3 / 4 * 100%);
+    left: 30vw;
+}
+
+.web-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.focus {
+    color: rgb(253, 95, 98);;
+    transition: color 0.5s ease-in;
+}
+
+#description-container.fade {
+    transition: color 0.5s ease-in;
+    color: rgba(247, 230, 182, 0.85);
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.shown {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.step {
+    position: relative;
+}
+
+.buffer {
+    height: 1000px;
+    width: 100%;
 }

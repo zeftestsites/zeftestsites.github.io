@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -58,6 +59,10 @@ module.exports = {
                 test: /\.(png|jpg)$/,
                 use: {
                     loader: 'file-loader?limit=8192',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/images/'
+                    },
                 },
             },
         ],
@@ -73,5 +78,8 @@ module.exports = {
             template: './app/src/index.html',
             filename: 'index.html',
         }),
+        new CopyPlugin([
+            { from: './app/src/assets/images/', to: 'assets/images/'}
+        ]),
     ],
 };

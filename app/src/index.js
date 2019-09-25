@@ -3,7 +3,6 @@ import './js/index.js';
 import './less/styles.less';
 import 'intersection-observer';
 import scrollama from 'scrollama';
-import enterView from 'enter-view';
 
 const scroller = scrollama();
 

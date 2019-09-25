@@ -31,7 +31,9 @@
 body {
     font-family: 'Akzidenz Grotesk Bold';
     margin: 0;
-    background-color: rgb(255, 244, 234);
+    //background-color: rgb(255, 244, 234);
+    background: rgb(255,244,234);
+    background: linear-gradient(90deg, rgba(255,244,234,1) 0%, rgba(255,224,196,1) 100%);
 }
 
 .header {
@@ -207,18 +209,46 @@ body {
     position: relative;
 }
 
+#main-image {
+    margin-top: 4rem;
+}
+
 #description-container {
     position: relative;
     margin-right: 4rem;
-    color: black;
+    color: #202735;
     transition: color 0.5s ease-in;
 }
 
 .description-image {
     position: absolute;
-    top: -5rem;
     // left: calc(3 / 4 * 100%);
-    left: 30vw;
+    left: 35vw;
+    top: 0;
+}
+
+#assist-image {
+    top: 15vw;
+}
+
+#wearable-image {
+    top: 20vw;
+}
+
+#yelp-image {
+    top: 25vw;
+}
+
+#smartphone-image {
+    top: 30vw;
+}
+
+#overload-image {
+    top: 35vw;
+}
+
+#job-image {
+    top: 40vw;
 }
 
 .web-container {
@@ -227,7 +257,7 @@ body {
 }
 
 .focus {
-    color: rgb(253, 95, 98);;
+    color: rgb(253, 95, 98);
     transition: color 0.5s ease-in;
 }
 
@@ -244,10 +274,6 @@ body {
 .shown {
     opacity: 1;
     transition: opacity 0.5s ease-in;
-}
-
-.step {
-    position: relative;
 }
 
 .buffer {

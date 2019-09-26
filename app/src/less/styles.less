@@ -71,142 +71,19 @@ body {
 
 /* Test Styles */
 
-/*
-
 .description-text {
     font-family: 'Founder Reg';
     font-size: 4rem;
-    line-height: 60px;
-    text-align: left;
-    margin-top: 10vh;
-    width: calc(2 / 3 * 100%);
-    line-height: 70px;
-    min-width: 21ch;
-    position: relative;
-}
-
-
-
-.unfade {
-    animation-name: unfade;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.web-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#description-container {
-    position: relative;
-    margin-right: 4rem;
-    color: black;
-    transition: color 0.5s ease-in;
-}
-
-#description-container.fade {
-    transition: color 0.5s ease-in;
-    color: grey;
-    // animation-name: fade;
-    // animation-duration: 0.5s;
-    // animation-fill-mode: forwards;
-}
-
-// #description-container.fade .step {
-// transition: color 0.5s ease-in;
-//     color: grey;
-// }
-
-
-.description-image {
-    position: absolute;
-    top: 0;
-    // left: calc(3 / 4 * 100%);
-    left: 120%;
-}
-
-.hidden {
-    animation-name: hidden;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.shown {
-    animation-name: shown;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.step {
-    color: inherit;
-    transition: color 0.5s ease-in;
-}
-
-.focus {
-    // color:rgb(253, 95, 98);
-    // animation-name: focus;
-    // animation-duration: 0.5s;
-    // animation-fill-mode: forwards;
-    transition: color 0.5s ease-in;
-    color: red;
-}
-
-.unfocus {
-    animation-name: unfocus;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes hidden {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-@keyframes shown {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fade {
-    from { color: #000000; }
-    // to { color: rgba(0, 0, 0, 0.15); }
-    to { color: rgba(247, 230, 182, 0.85)}
-}
-
-@keyframes unfade {
-    from { color: rgba(247, 230, 182, 0.85)}
-    // from { color: rgba(0, 0, 0, 0.15); }
-    to { color: #000000; }
-}
-
-@keyframes focus {
-    from { color: #000000; }
-    to { color: rgb(253, 95, 98); }
-}
-
-@keyframes unfocus {
-    from { color: rgb(253, 95, 98);  }
-    to { color: #000000; } 
-}
-
-*/
-
-.description-text {
-    font-family: 'Founder Reg';
-    font-size: 4rem;
-    line-height: 60px;
     text-align: left;
     margin-top: 4rem;
     width: calc(2 / 3 * 100%);
     line-height: 70px;
     min-width: 21ch;
     position: relative;
+    @media only screen and (max-width: 420px) {
+        font-size: 2rem;
+        line-height: inherit;
+    }
 }
 
 #main-image {

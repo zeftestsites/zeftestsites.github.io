@@ -12,6 +12,8 @@ scroller
     .setup({
         step: '.step',
         threshold: 5,
+        debug: true,
+        offset: 0.25,
     })
     .onStepEnter(({element, index, direction}) => {
         setTimeout(() => {
